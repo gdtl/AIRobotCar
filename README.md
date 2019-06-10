@@ -39,6 +39,9 @@ En fonction des coûts et des performances, on choisit de réaliser la voiture a
 # Lancement de la course
 
 
-# CONCLUSION
 
+# CONCLUSION
+Nous avons tenté de résumer notre travail pour permettre de créer facilement une voiture autonome et surtout avoir l'occasion d'expérimenter Hardware et Software ce qui procure une bonne initiation à l'électronique, Linux, les protocoles de connexion, les réseaux de neurones, etc...
+
+Pour plus d'informations, toute question, contactez baptiste MOREAU-PERNET sur ce Github.
 
