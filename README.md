@@ -49,12 +49,12 @@ Le code TEST Simulator.py permet de créer un modèle du type .h5, il faudra imp
 
 # Lancement de la course
 Le code pour le lancement de la course est le code automatic_run.py. 
-Avec la bibliothèque keras on charge le modèle pour les prédictions. La bibliothèque PiCamera installée sur la Pi permet de récupérer les photos. On a décidé d'utiliser Python pour récupérer environ deux images par seconde (en photo et pas en stream continu), ce qui est suffisant pour une voiture lente mais très peu pour une voiture rapide. L'utilisation du module OpenCV pour récupérer les photos est conseillée (nous n'avons pas réussi à télécharger le module). On choisit d'appeler la fonction principale avec un nombre maximal d'images prises pour que la voiture s'arrête à un moment, et on spécifie sa vitesse.
-
+Avec la bibliothèque keras on charge le modèle pour les prédictions. La bibliothèque PiCamera installée sur la Pi permet de récupérer les photos. On a décidé d'utiliser Python pour récupérer environ deux images par seconde (en photo et pas en stream continu), ce qui est suffisant pour une voiture lente mais très peu pour une voiture rapide. L'utilisation du module OpenCV pour récupérer les photos est conseillée (nous n'avons pas réussi à télécharger le module), pour éviter Python qui est très lent pour ce genre d'opérations système. On choisit d'appeler la fonction principale avec un nombre maximal d'images prises pour que la voiture s'arrête à un moment, et on spécifie ses vitesses en ligne droite et en virage (toujours entre 0 et 5). Pour chaque image prise par la caméra, (stockée dans Current_Pic (ne pas oublier de créer ce répertoire)), on stocke en plus cette image avec les autres dans le dossier Pictures, on prédit la direction grâce au modèle chargé, et on transforme cette direction (le résultat de la prédiction du réseau est une direction discrétisée en 5 valeurs: extrême gauche, gauche, tout droit, droite, extrême droite) en une commande de vitesse pour les roues. Puis on efface l'image de Current_Pic et on recommence, tant qu'on a pris moins d'images que le maximum fixé.
 
 
 # CONCLUSION
 Nous avons tenté de résumer notre travail pour permettre de créer facilement une voiture autonome et surtout avoir l'occasion d'expérimenter Hardware et Software ce qui procure une bonne initiation à l'électronique, Linux, les protocoles de connexion, les réseaux de neurones, etc...
+Les éléments d'amélioration sont: Eviter l'utilisation de Python pour récupérer les photos de la caméra (s'inspirer du code de Vincent H); Modifier le réseau pour obtenir une bonne accuracy sur des routes plus complexes.
 
 Pour plus d'informations, toute question, contactez baptiste MOREAU-PERNET sur ce Github.
 
