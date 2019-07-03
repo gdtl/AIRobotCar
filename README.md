@@ -14,8 +14,12 @@ Toutes nos interfaces ont été codées en Python, ce qui est suffisant pour un 
 
 # Raspberry Pi 3/2/Zero
 En fonction des coûts et des performances, on choisit de réaliser la voiture avec l'un de ces 3 Pi, de la plus performante à la moins performante.
+La Raspberry Pi 2 n'est pas équipée de carte wifi, il faudra donc penser à acquérir un dongle wifi de ce type par exemple : https://www.amazon.com/gp/product/B003MTTJOY/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003MTTJOY&linkCode=as2&tag=rapihq-20&linkId=7QAXDGG72H4EWYFB
+ou utiliser directement une Raspberry Pi 3, aussi puissante qu'une 2, avec quasiment les mêmes caractéristiques techniques.
 
 # Moteurs/Plateforme/Roues
+
+Voilà l'équipement utilisé : https://www.olimex.com/Products/Robot-CNC-Parts/KITS/ROBOT-2WDL-KIT/ (en réalité, nous avons acheté un modèle similaire sur Amazon). Pour un budget très restreint, c'est très efficace, les moteurs sont suffisamment puissants pour que la voiture roule suffisamment vite à plein régime. Nous ne saurions que recommander de rajouter plus de piles pour alimenter les roues que celles prévues dans le package. En effet, l'utilisation du L293DNE (voir paragraphe suivant), impose une réduction de la tension aux bornes des roues par rapport à celle fournie par les piles. Autrement dit, les roues tournent beaucoup moins vite quand on rajoute le L293DNE. Nous avons réalisé notre test sur de la moquette, car c'est très facile à trouver (du moins ça l'était pour nous à CentraleSupélec), c'est peu cher, c'est transportable, et c'est suffisamment uniforme pour créer un circuit test convaincant. Il s'avère néanmoins que la moquette n'est pas une surface lisse, et que les roues vont vite accrocher dessus à cause de la perte de puissance. Il ne faut donc pas hésiter à rajouter des piles en série. Pour ceux dont les cours d'électrocinétique remontent à quelque temps, il s'agit dont de rajouter un boitié de piles en reliant le moins de ce boitier au plus d'une pile déjà présente, et le plus au moins, selon le schéma présent ici : https://www.myshop-solaire.com/guide-de-montage-des-batteries-en-serie-parallele-_r_80_a_20.html
 
 # Contrôle des moteurs: L293DNE et alimentation
 
