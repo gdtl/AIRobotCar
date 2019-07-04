@@ -1,4 +1,4 @@
-# AIRobotCar (manque les files test.py pour conduire la voiture, à commenter, le file autonomous_race (à commenter))
+# AIRobotCar
 Autonomous car race
 
 
